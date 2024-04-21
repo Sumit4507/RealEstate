@@ -184,7 +184,7 @@ WHERE P.sell_price = (SELECT MAX(sell_price) FROM Property);
 
  -- f) Record the sale of a property that had been listed as being available. This entails storing the sales price, the buyer, the selling agent, the buyer’s agent (if any), and the date.
 INSERT INTO Transaction (transaction_id, Date, Final_Price, buyer_id, seller_id, agent_id, property_id)
-VALUES ('T0004', '2004-04-19', 2200000, 'B0000004', 'S0000004', 'A0000003', 'P0000004');
+VALUES ('T0004', '2004-04-19', 2200000, 'B0004', 'S0004', 'A0003', 'P0004');
 
 UPDATE Property
 SET status = 'Sold'
